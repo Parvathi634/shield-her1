@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<h2>Emergency Dashboard</h2>
+
+<h3>Add Emergency Contact</h3>
+
+<form action="/add_contact" method="POST">
+
+Name<br>
+<input type="text" name="name">
+
+<br><br>
+
+Email<br>
+<input type="email" name="email">
+
+<br><br>
+
+<button type="submit">Add Contact</button>
+
+</form>
+
+<hr>
+
+<h3>Emergency Contacts</h3>
+
+<ul>
+
+{% for contact in contacts %}
+
+<li>{{contact[0]}} - {{contact[1]}}</li>
+
+{% endfor %}
+
+</ul>
+
+<hr>
+
+<h3>🚨 Panic Button</h3>
+
+<form method="POST">
+
+<input type="hidden" name="message" value="HELP EMERGENCY">
+
+<input type="hidden" name="location" id="location">
+
+<button class="panic">SEND SOS</button>
+
+</form>
+
+<hr>
+
+<h3>Previous Alerts</h3>
+
+<ul>
+
+{% for alert in alerts %}
+
+<li>{{alert[0]}} - {{alert[1]}}</li>
+
+{% endfor %}
+
+</ul>
+
+<br>
+
+<a href="/logout">Logout</a>
+
+<script>
+
+navigator.geolocation.getCurrentPosition(function(position){
+
+document.getElementById("location").value =
+position.coords.latitude + "," + position.coords.longitude;
+
+});
+
+</script>
+
+</body>
+
+</html>
