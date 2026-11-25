@@ -41,3 +41,14 @@ SHIELD-HER – AI-Driven Women Safety and Health Alert System
 Developed by: Parvathi Murugadasan
 
 GitHub: "Parvathi634" (https://github.com/Parvathi634)
+
+## 📸 Application Screenshots
+
+### Login Page
+![Login Page](login.png)
+
+### Dashboard
+![Dashboard](dashboard.png)
+
+### Emergency Alert
+![Emergency Alert](emergency_alert.png)
