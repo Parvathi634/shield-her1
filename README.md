@@ -42,13 +42,13 @@ Developed by: Parvathi Murugadasan
 
 GitHub: "Parvathi634" (https://github.com/Parvathi634)
 
-## 📸 Application Screenshots
+## Application Screenshots
 
-### Login Page
+## Login Page
 ![Login Page](login.png)
 
-### Dashboard
+## Dashboard
 ![Dashboard](dashboard.png)
 
-### Emergency Alert
+## Emergency Alert
 ![Emergency Alert](emergency_alert.png)
